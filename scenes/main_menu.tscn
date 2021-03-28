@@ -1,0 +1,43 @@
+[gd_scene format=2]
+
+[node name="Node3D" type="Node3D"]
+script = null
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = null
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -206.0
+offset_right = 205.0
+offset_bottom = 193.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 5
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 5
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 195.0
+offset_bottom = 394.0
+custom_constants/separation = 10
+script = null
+
+[node name="new" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+offset_right = 185.0
+offset_bottom = 20.0
+text = "new_game"
+script = null
+
+[node name="load" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+offset_top = 30.0
+offset_right = 185.0
+offset_bottom = 50.0
+text = "load_game"
+script = null
