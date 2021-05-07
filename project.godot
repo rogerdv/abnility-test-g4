@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
+"class": @"ability_list",
+"language": @"GDScript",
+"path": "res://scripts/game/ability_list.gd"
+}, {
+"base": "Resource",
 "class": @"base_ability",
 "language": @"GDScript",
 "path": "res://scripts/game/base_ability.gd"
@@ -19,10 +24,30 @@ _global_script_classes=[ {
 "language": @"GDScript",
 "path": "res://scripts/game/base_item.gd"
 }, {
+"base": "item_weapon",
+"class": @"bonus_sword",
+"language": @"GDScript",
+"path": "res://scripts/game/item_bonus_weapon.gd"
+}, {
 "base": "KinematicBody3D",
 "class": @"character",
 "language": @"GDScript",
 "path": "res://scripts/game/character.gd"
+}, {
+"base": "base_item",
+"class": @"item_armor",
+"language": @"GDScript",
+"path": "res://scripts/game/item_armor.gd"
+}, {
+"base": "Resource",
+"class": @"item_list",
+"language": @"GDScript",
+"path": "res://scripts/game/item_list.gd"
+}, {
+"base": "base_item",
+"class": @"item_weapon",
+"language": @"GDScript",
+"path": "res://scripts/game/item_weapon.gd"
 }, {
 "base": "base_ability",
 "class": @"move_ability",
@@ -40,6 +65,11 @@ _global_script_classes=[ {
 "path": "res://scripts/game/player_character.gd"
 }, {
 "base": "base_ability",
+"class": @"pow_me",
+"language": @"GDScript",
+"path": "res://scripts/game/ab_powerup.gd"
+}, {
+"base": "base_ability",
 "class": @"test_ability",
 "language": @"GDScript",
 "path": "res://scripts/game/test_ability.gd"
@@ -48,32 +78,49 @@ _global_script_classes=[ {
 "class": @"test_passive",
 "language": @"GDScript",
 "path": "res://scripts/game/test_passv_ab.gd"
+}, {
+"base": "base_ability",
+"class": @"weapon_mastery",
+"language": @"GDScript",
+"path": "res://scripts/game/passive_wp_master.gd"
 } ]
 _global_script_class_icons={
 @"move_ability": "",
 @"npc_character": "",
 @"character": "",
 @"test_ability": "",
+@"bonus_sword": "",
+@"weapon_mastery": "",
+@"pow_me": "",
+@"item_armor": "",
 @"base_ability": "",
+@"item_weapon": "",
 @"player_character": "",
 @"base_item": "",
+@"ability_list": "",
+@"item_list": "",
 @"test_passive": ""
 }
 
 [application]
 
 config/name="Tower"
-run/main_scene="res://scenes/main_menu.tscn"
+run/main_scene="res://Assets/Levels/Dungeon_01.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
+game_data="*res://scripts/game/game_data.gd"
 game_instance="*res://scripts/systems/game_instance.gd"
 
 [display]
 
 window/size/width=854
 window/size/height=480
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 

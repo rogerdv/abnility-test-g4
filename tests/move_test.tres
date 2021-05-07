@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource( 1 )
 type = 1
-id = "id"
+id = "move"
+cooldown = 3.0
