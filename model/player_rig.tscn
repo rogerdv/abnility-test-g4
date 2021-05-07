@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://model/player-skel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/systems/player_rig.gd" type="Script" id=2]
+
+[node name="player" type="Node3D"]
+script = ExtResource( 2 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
+attrib = [ 12, 10, 12, 12 ]
+
+[node name="pivot" type="Node3D" parent="."]
+script = null
+
+[node name="Camera3D" type="Camera3D" parent="pivot"]
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 5, 5 )
+fov = 60.0
+script = null

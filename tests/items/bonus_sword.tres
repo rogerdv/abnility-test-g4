@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/game/item_bonus_weapon.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+id = "bonus"
+type = 1
+coin_price = 0
+dmd_price = 88
+use_anim = "Attack"
+UseTime = null
+AttachPoint = null
+equip_slot = null
+stackable = false
+damage = [ 11.0, 0.0, 0.0, 0.0 ]
+range = 1.0
