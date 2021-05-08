@@ -14,7 +14,7 @@ func _ready():
 func execute(caster, target):
 	var forward = caster.get_global_transform().basis.z
 	print("Forward ",forward)
-	caster.translate(Vector3(0,0,2)+forward)
+	caster.translate(Vector3(0,0,10)+forward)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
