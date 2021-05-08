@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource( 1 )
-type = 1
-id = "id"
+type = 2
+id = "passive0"
