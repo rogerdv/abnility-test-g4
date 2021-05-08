@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/game/ability_list.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+abilities = [ "res://tests/active01.tres", "res://tests/move_test.tres", "res://tests/passive01.tres", "res://tests/power_me.tres", "res://tests/pass_wpn_master.tres" ]

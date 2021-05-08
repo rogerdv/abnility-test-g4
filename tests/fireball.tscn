@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/ParticleFirecloud.png" type="Texture2D" id=1]
+[ext_resource path="res://tests/spell_projectile.gd" type="Script" id=2]
+
+[sub_resource type="StandardMaterial3D" id=1]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource( 1 )
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3( 0, 0, 1 )
+spread = 20.0
+gravity = Vector3( 0, 0, 1 )
+initial_velocity = 0.2
+initial_velocity_random = 1.0
+linear_accel = 3.0
+linear_accel_random = 1.0
+radial_accel = 1.0
+radial_accel_random = 1.0
+tangential_accel = 1.0
+tangential_accel_random = 1.0
+angle = 360.0
+angle_random = 1.0
+scale_random = 1.0
+color = Color( 1, 0.411765, 0.45098, 1 )
+
+[sub_resource type="QuadMesh" id=3]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource( 2 )
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+material_override = SubResource( 1 )
+amount = 30
+lifetime = 0.8
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 3 )
+script = null

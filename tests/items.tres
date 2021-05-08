@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/game/item_list.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+items = [ "res://tests/items/weapon2.tres", "res://tests/items/weapon.tres", "res://tests/items/basic_armor.tres", "res://tests/items/bonus_sword.tres" ]
