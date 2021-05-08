@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://model/items/sword_01.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://model/items/sword_mat.tres" type="Material" id=2]
+[ext_resource path="res://model/fire-red.png" type="Texture2D" id=3]
+
+[sub_resource type="ParticlesMaterial" id=1]
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_box_extents = Vector3( 0.5, 0.5, 0.5 )
+direction = Vector3( 0, 1, 0 )
+spread = 20.0
+initial_velocity = 0.2
+initial_velocity_random = 1.0
+angular_velocity = 1.0
+angular_velocity_random = 1.0
+angle_random = 1.0
+scale = 0.5
+color = Color( 0.780392, 0.0705882, 0.141176, 1 )
+
+[sub_resource type="StandardMaterial3D" id=2]
+albedo_color = Color( 0.835294, 0.105882, 0.0509804, 1 )
+albedo_texture = ExtResource( 3 )
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id=3]
+material = SubResource( 2 )
+size = Vector2( 0.1, 0.1 )
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.0902017, -0.0798484, 0 )
+mesh = ExtResource( 1 )
+surface_material_override/0 = ExtResource( 2 )
+script = null
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform( 0.698728, -0.715388, 0, 0.715388, 0.698728, 0, 0, 0, 1, 0.219161, 0.364237, 0 )
+visible = false
+amount = 15
+lifetime = 0.5
+visibility_aabb = AABB( -0.107565, -0.163788, -0.0420883, 0.215129, 0.116637, 0.0841766 )
+process_material = SubResource( 1 )
+draw_pass_1 = SubResource( 3 )
+script = null

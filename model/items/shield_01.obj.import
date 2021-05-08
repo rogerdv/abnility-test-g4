@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+path="res://.godot/imported/shield_01.obj-5a5a339d28a5a582feec0919bdb7bacb.mesh"
+
+[deps]
+
+files=[ "res://.godot/imported/shield_01.obj-5a5a339d28a5a582feec0919bdb7bacb.mesh" ]
+
+source_file="res://model/items/shield_01.obj"
+dest_files=[ "res://.godot/imported/shield_01.obj-5a5a339d28a5a582feec0919bdb7bacb.mesh", "res://.godot/imported/shield_01.obj-5a5a339d28a5a582feec0919bdb7bacb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
