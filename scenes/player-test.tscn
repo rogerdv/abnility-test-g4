@@ -19,6 +19,7 @@ radial_segments = 8
 
 [node name="player" type="KinematicBody3D"]
 script = ExtResource( 1 )
+attrib = [ 14.0, 12.0, 12.0, 13.0 ]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0207415, 0.695494, -0.0126887 )

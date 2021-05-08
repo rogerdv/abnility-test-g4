@@ -83,6 +83,8 @@ script = null
 
 [node name="npc" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.11502, 0, 0 )
+attrib = [ 11, 9, 11, 15 ]
+natural_res = [ 1.0, 0.0, 0.0, 0.0 ]
 
 [connection signal="body_entered" from="OmniLight3D/Area3D" to="OmniLight3D/Area3D" method="_on_Area3D_body_entered"]
 [connection signal="body_exited" from="OmniLight3D/Area3D" to="OmniLight3D/Area3D" method="_on_Area3D_body_exited"]
