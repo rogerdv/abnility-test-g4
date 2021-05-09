@@ -15,6 +15,16 @@ _global_script_classes=[ {
 "path": "res://scripts/game/ability_list.gd"
 }, {
 "base": "Resource",
+"class": @"ai_logic",
+"language": @"GDScript",
+"path": "res://scripts/ai/ai_logic.gd"
+}, {
+"base": "Node",
+"class": @"ai_state",
+"language": @"GDScript",
+"path": "res://scripts/ai/ai_state.gd"
+}, {
+"base": "Resource",
 "class": @"base_ability",
 "language": @"GDScript",
 "path": "res://scripts/game/base_ability.gd"
@@ -69,6 +79,16 @@ _global_script_classes=[ {
 "language": @"GDScript",
 "path": "res://scripts/game/ab_powerup.gd"
 }, {
+"base": "ai_logic",
+"class": @"skel_combat",
+"language": @"GDScript",
+"path": "res://scripts/ai/skeleton/skel_combat.gd"
+}, {
+"base": "ai_logic",
+"class": @"skidle_logic",
+"language": @"GDScript",
+"path": "res://scripts/ai/skeleton/skidle_logic.gd"
+}, {
 "base": "base_ability",
 "class": @"test_ability",
 "language": @"GDScript",
@@ -85,41 +105,30 @@ _global_script_classes=[ {
 "path": "res://scripts/game/passive_wp_master.gd"
 } ]
 _global_script_class_icons={
-"ability_list": null,
-"base_ability": null,
-"base_item": null,
-"bonus_sword": null,
-"character": null,
-"item_armor": null,
-"item_list": null,
-"item_weapon": null,
-"move_ability": null,
-"npc_character": null,
-"player_character": null,
-"pow_me": null,
-"test_ability": null,
-"test_passive": null,
-"weapon_mastery": null,
-@"test_passive": "",
 @"item_list": "",
+@"test_passive": "",
+@"ai_state": "",
 @"ability_list": "",
 @"base_item": "",
 @"player_character": "",
-@"item_weapon": "",
+@"skidle_logic": "",
 @"base_ability": "",
+@"item_weapon": "",
 @"item_armor": "",
 @"pow_me": "",
+@"ai_logic": "",
 @"weapon_mastery": "",
 @"bonus_sword": "",
-@"test_ability": "",
 @"character": "",
+@"test_ability": "",
 @"npc_character": "",
-@"move_ability": ""
+@"move_ability": "",
+@"skel_combat": ""
 }
 
 [application]
 
-config/name="Tower"
+config/name="Tower Test"
 run/main_scene="res://Assets/Levels/Dungeon_01.tscn"
 config/icon="res://icon.png"
 
