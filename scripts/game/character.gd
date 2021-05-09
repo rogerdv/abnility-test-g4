@@ -21,12 +21,14 @@ var nav
 var bonus=[]	#bonuses
 var buff=[]	#buffers
 
+
 var lights:int = 0
 
 var target		#Selected entity
 var inventory = []
-
-var equipped=["",""]
+var abilities = []
+var passive:String = "" 	#equipped passive
+var equipped=["","",""]
 var actions=[]	#WE can queue actions, like an ability after the current attack
 
 # Called when the node enters the scene tree for the first time.
@@ -50,9 +52,10 @@ func set_navigator(navigator):
 	$NavigationAgent3D.set_navigation(nav)	
 	
 func move_to(dest:Vector3):
-	$NavigationAgent3D.set_target_location(dest)
-	if not $NavigationAgent3D.is_target_reachable():
-		print("Cant reach location")
+	pass
+	#$NavigationAgent3D.set_target_location(dest)
+	#if not $NavigationAgent3D.is_target_reachable():
+	#	print("Cant reach location")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

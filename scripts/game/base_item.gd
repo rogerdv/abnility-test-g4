@@ -9,8 +9,8 @@ class_name base_item
 @export var dmd_price:int = 0		#price in diamonds, for premium items
 @export var mesh:Resource
 @export var use_anim:String	#Use animation
-@export var UseTime:float 	#time required to use the item
-@export var AttachPoint:String
+@export var UseTime:float = 1.0	#time required to use the item
+@export var AttachPoint:String 
 @export var equip_slot:int
 @export var icon:Texture
 @export var stackable:bool = false

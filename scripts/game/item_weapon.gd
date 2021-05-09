@@ -3,7 +3,7 @@ class_name item_weapon
 
 # Test weapon
 
-@export var damage:Array=[0,0,0,0]
+@export var damage:Array[float] 
 @export var range:float=1.0
 
 func test():

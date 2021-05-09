@@ -9,4 +9,5 @@ func do_logic(manager):
 	if manager.sensor.visible_ents.size()>0:
 		print("I see player")
 		manager.parent.target = manager.sensor.visible_ents[0]
+		manager.parent.face_to(Vector3(manager.parent.target.translation.x, 0, manager.parent.target.translation.z))
 		manager.current = "combat"

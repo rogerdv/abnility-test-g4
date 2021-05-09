@@ -4,9 +4,6 @@ class_name player_character
 # Declare member variables here. Examples:
 var xp:int = 0
 var level:int=1
-var abilities = []
-
-var passive:String = "" 	#equipped passive
 
 var default_color:Color
 
@@ -15,7 +12,6 @@ func _ready():
 	super._ready()
 	#default_color=$MeshInstance3D.get_surface_material(0).albedo_color
 	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
