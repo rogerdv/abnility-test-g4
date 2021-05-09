@@ -10,6 +10,9 @@ var it_list = []  #Store items here
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pass
+	
+func init_stuff():
 	#Load all the ability resource files
 	for ab_resource in abilities.abilities:
 		print(ab_resource)
