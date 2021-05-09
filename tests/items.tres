@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource( 1 )
-items = [ "res://tests/items/weapon2.tres", "res://tests/items/weapon.tres", "res://tests/items/basic_armor.tres", "res://tests/items/bonus_sword.tres" ]
+items = [ "res://tests/items/weapon2.tres", "res://tests/items/weapon.tres", "res://tests/items/basic_armor.tres", "res://tests/items/bonus_sword.tres", "res://tests/items/skel_claw.tres" ]
