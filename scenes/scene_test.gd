@@ -25,9 +25,9 @@ func _ready():
 		$UI.add_item_button(game_instance.player.get_player().inventory[i].get("id"),i)	
 	#game_instance.player.get_player().target = $npc
 	# Put some stuff in the NPC
-	var t = {"id":"shield","amount":1}
+	var t = {"id":"mandolin","amount":1}
 	$npc.inventory.append(t)
-	$npc.equipped[base_item.SLOT_ARMOR]="shield"
+	#$npc.equipped[base_item.SLOT_ARMOR]="skelet_claw"
 	
 
 func _input(event):
