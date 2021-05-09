@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Dungeon_01_parts/Handrail/Handrail_02.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/Dungeon_01_parts/Floors/Floor_01.obj" type="ArrayMesh" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://model/skel/Skeleton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/test_ui.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/scene_test.gd" type="Script" id=11]
+[ext_resource path="res://model/skel/NPC-Skeleton.tscn" type="PackedScene" id=12]
 
 [node name="Dungeon_01" type="Node3D"]
 script = ExtResource( 11 )
@@ -331,3 +332,6 @@ transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.30103, 0, 0 )
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.821169, 0.570685, 0, -0.570685, 0.821169, 0.605296, 4.10971, -0.786021 )
 script = null
+
+[node name="npc2" parent="." instance=ExtResource( 12 )]
+transform = Transform( 0.232874, 0, -0.0909388, 0, 0.25, 0, 0.0909388, 0, 0.232874, 4.24025, 0, 0 )

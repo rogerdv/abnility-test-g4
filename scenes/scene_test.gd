@@ -27,6 +27,7 @@ func _ready():
 	# Put some stuff in the NPC
 	var t = {"id":"mandolin","amount":1}
 	$npc.inventory.append(t)
+	$npc2.inventory.append(t)
 	#$npc.equipped[base_item.SLOT_ARMOR]="skelet_claw"
 	
 
