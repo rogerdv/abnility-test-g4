@@ -23,8 +23,7 @@ func _process(delta):
 		update_state()
 		timer = 0.25
 	
-func update_state():	
-	print("Processing state ",get_node(current).name)
+func update_state():		
 	get_node(current).update(self)
 	
 func add_flag(flag):
