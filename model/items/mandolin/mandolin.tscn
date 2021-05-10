@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://model/items/mandolin/mandolin.obj" type="ArrayMesh" id=1]
+
+[node name="mandolin" type="MeshInstance3D"]
+transform = Transform( -0.00113074, 0.0251919, 0.999682, 0.998994, 0.0448399, 0, -0.0448257, 0.998676, -0.0252173, 0, 0.632295, 0 )
+mesh = ExtResource( 1 )
+surface_material_override/0 = null
+script = null

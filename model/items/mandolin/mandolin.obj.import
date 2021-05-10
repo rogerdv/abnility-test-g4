@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+path="res://.godot/imported/mandolin.obj-e7267a940345f1960caf219960fc66ba.mesh"
+
+[deps]
+
+files=[ "res://.godot/imported/mandolin.obj-e7267a940345f1960caf219960fc66ba.mesh" ]
+
+source_file="res://model/items/mandolin/mandolin.obj"
+dest_files=[ "res://.godot/imported/mandolin.obj-e7267a940345f1960caf219960fc66ba.mesh", "res://.godot/imported/mandolin.obj-e7267a940345f1960caf219960fc66ba.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
