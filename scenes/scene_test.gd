@@ -9,6 +9,8 @@ var ROTATE:int=0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#var gd = game_data
+	game_instance.fill_player()
 	add_child(game_instance.player)
 	game_instance.player.name = "player"
 	game_instance.player.translation = Vector3(0,0,0)
@@ -21,12 +23,12 @@ func _ready():
 		$UI.add_button(game_instance.player.get_player().abilities[i].get("id"),i)
 	
 	for i in game_instance.player.get_player().inventory.size():
-		print(i)
+		#print(i)
 		$UI.add_item_button(game_instance.player.get_player().inventory[i].get("id"),i)	
 	#game_instance.player.get_player().target = $npc
 	# Put some stuff in the NPC
-	var t = {"id":"mandolin","amount":1}
-	$npc.inventory.append(t)
+	var t = {"id":"pum","amount":1}
+	$npc3.inventory.append(t)
 	$npc2.inventory.append(t)
 	#$npc.equipped[base_item.SLOT_ARMOR]="skelet_claw"
 	

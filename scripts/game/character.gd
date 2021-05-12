@@ -82,17 +82,18 @@ func get_attrib(att:int)->int:
 	return base
 
 func check_actions(delta):
+	
 	if actions.size()>0:		
 		if  actions[0].get("counter")==0: # #the action was just added			
 			actions[0]["counter"]+=delta
 			match actions[0].get("type"):
 				"item":
 					for i in range(inventory.size()):
-						if inventory[i].get("id")==actions[0].get("id"):
+						if inventory[i].get("id")==actions[0].get("id"):							
 							game_data.get_item(actions[0].get("id")).use(actions[0].get("owner"),actions[0].get("target"))
 							play_anim(game_data.get_item(actions[0].get("id")).use_anim)
 				"ability":	
-					play_anim(game_data.get_ability(actions[0].get("id")).use_anim)
+					play_anim(game_instance.get_ability(actions[0].get("id")).use_anim)
 					game_data.get_ability(actions[0].get("id")).execute(actions[0].get("owner"),actions[0].get("target"))
 					
 		#in cooldown

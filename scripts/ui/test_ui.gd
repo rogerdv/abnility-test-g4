@@ -14,7 +14,7 @@ func add_button(name:String, id:int):
 func add_item_button(name:String, id:int):
 	var container = HBoxContainer.new()
 	var icon=TextureRect.new()
-	icon.texture=game_data.get_item(name).icon
+	icon.texture = game_data.get_item(name).icon
 	container.add_child(icon)
 	var lab=Label.new()  
 	lab.text=name
@@ -53,7 +53,7 @@ func button_pressed(id):
 		else:
 			game_instance.player.get_player().passive=""	#unequip passive ability
 	else : 	#its an active ability		
-		var a = {"type":"ability","id":ab_id,"cooldown":game_data.get_ability(ab_id).cooldown,"counter":0.0,
+		var a = {"type":"ability","id":ab_id,"cooldown":game_instance.get_ability(ab_id).cooldown,"counter":0.0,
 		"owner":game_instance.player.get_player(),"target":game_instance.player.get_player().target}
 		game_instance.player.get_player().actions.append(a)
 		#game_data.get_ability(ab_id).execute(game_instance.player.get_player(), game_instance.player.get_player().target)
@@ -71,6 +71,9 @@ func item_use(slot):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$VBoxContainer/str.text= str(game_instance.player.get_player().get_attrib(character.STR))
+	var hp = str(game_instance.player.get_player().hp[0])+"/"+str(game_instance.player.get_player().hp[1])
+	$VBoxContainer/hp.text=hp
+	$fps.text= str(Engine.get_frames_per_second())
 
 func update_lights(number:int):
 	$Label.text="Lights "+str(game_instance.player.get_player().lights)

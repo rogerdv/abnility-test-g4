@@ -37,7 +37,7 @@ func _on_Timer_timeout():
 	if passive != "":
 		for i in abilities:
 			if i.get("id")==passive:
-				game_data.get_ability(i.get("id")).passive_process(self)
+				game_instance.get_ability(i.get("id")).passive_process(self)
 	
 	#check bonus and power ups
 	var to_remove=[]

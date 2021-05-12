@@ -3,7 +3,7 @@ class_name ability_list
 
 # This is just a container for a list of routes to all the ability resource files
 
-@export var abilities:Array
+@export var abilities:Array[Resource]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

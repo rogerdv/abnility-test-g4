@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Dungeon_01_parts/Handrail/Handrail_02.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/Dungeon_01_parts/Floors/Floor_01.obj" type="ArrayMesh" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Assets/Dungeon_01_parts/Unions/Union_01.obj" type="ArrayMesh" id=6]
 [ext_resource path="res://Assets/Dungeon_01_parts/Floors/Floor_02.obj" type="ArrayMesh" id=7]
 [ext_resource path="res://Assets/Dungeon_01_parts/Walls/wall_01.obj" type="ArrayMesh" id=8]
-[ext_resource path="res://model/skel/Skeleton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/test_ui.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/scene_test.gd" type="Script" id=11]
 [ext_resource path="res://model/skel/NPC-Skeleton.tscn" type="PackedScene" id=12]
@@ -324,9 +323,6 @@ mesh = ExtResource( 4 )
 surface_material_override/0 = null
 script = null
 
-[node name="npc" parent="." instance=ExtResource( 9 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.30103, 0, 0 )
-
 [node name="UI" parent="." instance=ExtResource( 10 )]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -334,4 +330,7 @@ transform = Transform( 1, 0, 0, 0, 0.821169, 0.570685, 0, -0.570685, 0.821169, 0
 script = null
 
 [node name="npc2" parent="." instance=ExtResource( 12 )]
-transform = Transform( 0.232874, 0, -0.0909388, 0, 0.25, 0, 0.0909388, 0, 0.232874, 4.24025, 0, 0 )
+transform = Transform( 0.211395, 0, -0.133463, 0, 0.25, 0, 0.133463, 0, 0.211395, 4.61672, 0, 0 )
+
+[node name="npc3" parent="." instance=ExtResource( 12 )]
+transform = Transform( 0.219268, 0, 0.120091, 0, 0.25, 0, -0.120091, 0, 0.219268, -4.94677, 0, 0 )

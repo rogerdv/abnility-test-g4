@@ -4,20 +4,22 @@ extends Node
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var player = preload("res://model/player_rig.tscn").instance()
+
+var player = load("res://model/player_rig.tscn").instance()
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
-	game_data.init_stuff()
+	pass
 
-	for ab in game_data.ab_list:	
-		#print(ab["id"])	
+func fill_player():
+	for ab in game_data.abilities.abilities:	
+		print(ab["id"])	
 		var t = {"id":ab["id"],"level":2 }
 		player.get_player().abilities.append(t)	
 	
-	for it in game_data.it_list:
-		#print(it["id"])	
+	for it in game_data.items.items:
+		print(it["id"])	
 		var t = {"id":it["id"],"amount":1}
 		player.get_player().inventory.append(t)
 		

@@ -34,6 +34,6 @@ func use(owner, target):
 	print(target.hp[0],"/",target.hp[1]," - ",base)
 	if target.hp[0]<=0:	#is dead
 		target=null
-		if owner is player_character:
-			print("Killed by player")
-			owner.xp+=5
+		#if owner is player_character:
+		#	print("Killed by player")
+		#	owner.xp+=5
