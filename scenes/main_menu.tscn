@@ -41,7 +41,8 @@ script = null
 offset_top = 30.0
 offset_right = 185.0
 offset_bottom = 50.0
-text = "load_game"
+text = "test_stream"
 script = null
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/new" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/load" to="." method="_on_load_pressed"]
