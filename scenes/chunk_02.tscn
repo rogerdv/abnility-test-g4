@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Dungeon_01_parts/Floors/Floor_02.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="StandardMaterial3D" id=1]
+albedo_color = Color( 0.339844, 0.119158, 0.0912048, 1 )
+
+[node name="Node3D" type="Node3D"]
+script = null
+
+[node name="Floor_02" type="MeshInstance3D" parent="."]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 28.2868, 0, -22.984 )
+mesh = ExtResource( 1 )
+surface_material_override/0 = SubResource( 1 )
+script = null

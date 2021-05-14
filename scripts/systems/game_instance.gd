@@ -13,13 +13,12 @@ func _ready():
 	pass
 
 func fill_player():
-	for ab in game_data.abilities.abilities:	
-		print(ab["id"])	
+	for ab in game_data.abilities.abilities:			
 		var t = {"id":ab["id"],"level":2 }
 		player.get_player().abilities.append(t)	
 	
 	for it in game_data.items.items:
-		print(it["id"])	
+		#print(it["id"])	
 		var t = {"id":it["id"],"amount":1}
 		player.get_player().inventory.append(t)
 		

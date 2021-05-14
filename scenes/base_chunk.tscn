@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Dungeon_01_parts/Floors/Floor_02.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://scenes/base_chunk.gd" type="Script" id=2]
+[ext_resource path="res://scenes/test_ui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/disable.gd" type="Script" id=4]
+[ext_resource path="res://scenes/enable.gd" type="Script" id=5]
+
+[sub_resource type="StandardMaterial3D" id=1]
+albedo_color = Color( 0.0392157, 0.345098, 0.34902, 1 )
+
+[sub_resource type="BoxShape3D" id=2]
+size = Vector3( 2, 2, 65.2538 )
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource( 2 )
+
+[node name="level" type="Node3D" parent="."]
+script = null
+
+[node name="Floor_02" type="MeshInstance3D" parent="level"]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0 )
+mesh = ExtResource( 1 )
+surface_material_override/0 = SubResource( 1 )
+script = null
+
+[node name="disable" type="Area3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6923, 0, -11.1889 )
+script = ExtResource( 4 )
+anchor_node = "../chunk_01"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/disable"]
+shape = SubResource( 2 )
+script = null
+
+[node name="chunk_01" type="Node3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3468, 0, 23.0246 )
+script = null
+
+[node name="chunk_02" type="Node3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1839, 0, 23.0246 )
+script = null
+
+[node name="enable" type="Area3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2636, 0, -11.1889 )
+script = ExtResource( 5 )
+anchor_node = "../chunk_01"
+scene = "res://scenes/chunk_01.tscn"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/enable"]
+shape = SubResource( 2 )
+script = null
+
+[node name="disable2" type="Area3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7968, 0, -11.1889 )
+script = ExtResource( 4 )
+anchor_node = "../chunk_02"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/disable2"]
+shape = SubResource( 2 )
+script = null
+
+[node name="enable2" type="Area3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -11.189 )
+script = ExtResource( 5 )
+anchor_node = "../chunk_02"
+scene = "res://scenes/chunk_02.tscn"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/enable2"]
+shape = SubResource( 2 )
+script = null
+
+[node name="UI" parent="." instance=ExtResource( 3 )]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.893748, 0.44857, 0, -0.44857, 0.893748, 0, 9.65302, 0 )
+script = null
+
+[connection signal="body_entered" from="level/disable" to="level/disable" method="_on_disable_body_entered"]
+[connection signal="body_entered" from="level/enable" to="level/enable" method="_on_enable_body_entered"]
+[connection signal="body_entered" from="level/disable2" to="level/disable2" method="_on_disable_body_entered"]
+[connection signal="body_entered" from="level/enable2" to="level/enable2" method="_on_enable_body_entered"]
