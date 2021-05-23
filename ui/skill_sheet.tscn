@@ -1,9 +1,14 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/slot-button-empty.png" type="Texture2D" id=1]
+[ext_resource path="res://scripts/ui/AbilitySlot.gd" type="Script" id=2]
+[ext_resource path="res://scripts/ui/skill_sheet.gd" type="Script" id=3]
+[ext_resource path="res://scripts/ui/passive_slot.gd" type="Script" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = null
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -19,3 +24,167 @@ script = null
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 834.0
+offset_bottom = 470.0
+script = null
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 807.0
+offset_bottom = 453.0
+script = null
+
+[node name="Abilities" type="GridContainer" parent="MarginContainer/PanelContainer/HBoxContainer"]
+offset_right = 530.0
+offset_bottom = 446.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+custom_constants/hseparation = 5
+columns = 3
+script = null
+
+[node name="EquipAbilities" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer"]
+offset_left = 534.0
+offset_right = 800.0
+offset_bottom = 446.0
+size_flags_horizontal = 3
+script = null
+
+[node name="passive" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities"]
+offset_right = 266.0
+offset_bottom = 173.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = null
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/passive"]
+offset_right = 266.0
+offset_bottom = 26.0
+text = "selected_pass"
+align = 1
+structured_text_bidi_override_options = [  ]
+script = null
+
+[node name="passive_slot" type="TextureRect" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/passive"]
+offset_left = 83.0
+offset_top = 30.0
+offset_right = 183.0
+offset_bottom = 130.0
+rect_min_size = Vector2( 100, 100 )
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource( 1 )
+expand = true
+script = null
+
+[node name="icon" type="TextureRect" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/passive/passive_slot"]
+offset_right = 100.0
+offset_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+expand = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="actives" type="GridContainer" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities"]
+offset_left = 23.0
+offset_top = 177.0
+offset_right = 243.0
+offset_bottom = 446.0
+size_flags_horizontal = 4
+size_flags_vertical = 2
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 2
+script = null
+
+[node name="active0" type="TextureRect" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/actives"]
+offset_right = 100.0
+offset_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 1 )
+expand = true
+script = null
+
+[node name="icon" type="TextureRect" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/actives/active0"]
+offset_right = 64.0
+offset_bottom = 64.0
+rect_min_size = Vector2( 100, 100 )
+expand = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="active1" type="TextureRect" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/actives"]
+offset_left = 120.0
+offset_right = 220.0
+offset_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 1 )
+expand = true
+script = null
+
+[node name="icon" type="TextureRect" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/actives/active1"]
+offset_right = 40.0
+offset_bottom = 40.0
+rect_min_size = Vector2( 100, 100 )
+expand = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="active2" type="TextureRect" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/actives"]
+offset_top = 120.0
+offset_right = 100.0
+offset_bottom = 220.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 1 )
+expand = true
+script = null
+
+[node name="icon" type="TextureRect" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/actives/active2"]
+offset_right = 40.0
+offset_bottom = 40.0
+rect_min_size = Vector2( 100, 100 )
+expand = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="active3" type="TextureRect" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/actives"]
+offset_left = 120.0
+offset_top = 120.0
+offset_right = 220.0
+offset_bottom = 220.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 1 )
+expand = true
+script = null
+
+[node name="icon" type="TextureRect" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/actives/active3"]
+offset_right = 40.0
+offset_bottom = 40.0
+rect_min_size = Vector2( 100, 100 )
+expand = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="accept" type="Button" parent="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/actives"]
+offset_top = 240.0
+offset_right = 100.0
+offset_bottom = 269.0
+text = "accept"
+script = null
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/HBoxContainer/EquipAbilities/actives/accept" to="." method="_on_accept_pressed"]

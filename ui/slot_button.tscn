@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/slot-button-empty.png" type="Texture2D" id=1]
+[ext_resource path="res://scripts/ui/slot_button.gd" type="Script" id=2]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 1 )
+expand = true
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+rect_min_size = Vector2( 100, 100 )
+expand = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="level" type="Label" parent="."]
+offset_left = 56.0217
+offset_top = 73.0217
+offset_right = 100.022
+offset_bottom = 99.0217
+text = "22"
+align = 2
+valign = 2
+structured_text_bidi_override_options = [  ]
+script = null

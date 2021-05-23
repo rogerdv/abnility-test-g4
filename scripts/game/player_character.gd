@@ -7,6 +7,8 @@ var level:int=1
 
 var default_color:Color
 
+var equip_abilities=["","","",""]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	super._ready()

@@ -1,16 +1,22 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Dungeon_01_parts/Floors/Floor_02.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://scenes/base_chunk.gd" type="Script" id=2]
-[ext_resource path="res://scenes/test_ui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/test_ui.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/disable.gd" type="Script" id=4]
 [ext_resource path="res://scenes/enable.gd" type="Script" id=5]
+[ext_resource path="res://model/props/columns_material.tres" type="Material" id=6]
+[ext_resource path="res://model/props/Column 1.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://model/skel/NPC-Skeleton.tscn" type="PackedScene" id=8]
 
 [sub_resource type="StandardMaterial3D" id=1]
 albedo_color = Color( 0.0392157, 0.345098, 0.34902, 1 )
 
 [sub_resource type="BoxShape3D" id=2]
 size = Vector3( 2, 2, 65.2538 )
+
+[sub_resource type="BoxShape3D" id=3]
+size = Vector3( 0.682417, 3.13815, 0.848243 )
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource( 2 )
@@ -70,11 +76,43 @@ scene = "res://scenes/chunk_02.tscn"
 shape = SubResource( 2 )
 script = null
 
+[node name="Column 1" type="MeshInstance3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5686, 0, -1.68515 )
+mesh = ExtResource( 7 )
+surface_material_override/0 = ExtResource( 6 )
+script = null
+
+[node name="StaticBody3D" type="StaticBody3D" parent="level/Column 1"]
+script = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/Column 1/StaticBody3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54751, 0 )
+shape = SubResource( 3 )
+script = null
+
+[node name="Column 2" type="MeshInstance3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6258, 0, -1.68515 )
+mesh = ExtResource( 7 )
+surface_material_override/0 = ExtResource( 6 )
+script = null
+
+[node name="StaticBody3D" type="StaticBody3D" parent="level/Column 2"]
+script = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/Column 2/StaticBody3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54751, 0 )
+shape = SubResource( 3 )
+script = null
+
 [node name="UI" parent="." instance=ExtResource( 3 )]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.893748, 0.44857, 0, -0.44857, 0.893748, 0, 9.65302, 0 )
 script = null
+
+[node name="npc_skel" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, -9.93262 )
+attrib = [ 11, 8, 10, 10 ]
 
 [connection signal="body_entered" from="level/disable" to="level/disable" method="_on_disable_body_entered"]
 [connection signal="body_entered" from="level/enable" to="level/enable" method="_on_enable_body_entered"]

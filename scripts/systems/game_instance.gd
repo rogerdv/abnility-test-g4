@@ -6,13 +6,14 @@ extends Node
 # var b = "text"
 
 var player = load("res://model/player_rig.tscn").instance()
-
+var active_ents		#active entities in the whole scene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():	
 	pass
 
 func fill_player():
+	game_data.check_flush()
 	for ab in game_data.abilities.abilities:			
 		var t = {"id":ab["id"],"level":2 }
 		player.get_player().abilities.append(t)	

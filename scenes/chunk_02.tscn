@@ -1,6 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Dungeon_01_parts/Floors/Floor_02.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://model/props/columns_material.tres" type="Material" id=2]
+[ext_resource path="res://model/props/Column 1.1.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://model/props/Column 1.2.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://model/props/Column 1.obj" type="ArrayMesh" id=5]
 
 [sub_resource type="StandardMaterial3D" id=1]
 albedo_color = Color( 0.339844, 0.119158, 0.0912048, 1 )
@@ -8,8 +12,41 @@ albedo_color = Color( 0.339844, 0.119158, 0.0912048, 1 )
 [node name="Node3D" type="Node3D"]
 script = null
 
-[node name="Floor_02" type="MeshInstance3D" parent="."]
+[node name="level" type="Node3D" parent="."]
+script = null
+
+[node name="Floor_02" type="MeshInstance3D" parent="level"]
 transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 28.2868, 0, -22.984 )
 mesh = ExtResource( 1 )
 surface_material_override/0 = SubResource( 1 )
+script = null
+
+[node name="Column 11" type="MeshInstance3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.7493, -0.0170182, -24.8216 )
+mesh = ExtResource( 3 )
+surface_material_override/0 = ExtResource( 2 )
+script = null
+
+[node name="Column 12" type="MeshInstance3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.18, 0, -12.452 )
+mesh = ExtResource( 4 )
+surface_material_override/0 = ExtResource( 2 )
+script = null
+
+[node name="Column 2" type="MeshInstance3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.66405, 0, -24.8678 )
+mesh = ExtResource( 5 )
+surface_material_override/0 = ExtResource( 2 )
+script = null
+
+[node name="Column 3" type="MeshInstance3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1472, 0, -24.8678 )
+mesh = ExtResource( 5 )
+surface_material_override/0 = ExtResource( 2 )
+script = null
+
+[node name="Column 4" type="MeshInstance3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1472, 0, -12.7877 )
+mesh = ExtResource( 5 )
+surface_material_override/0 = ExtResource( 2 )
 script = null

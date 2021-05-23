@@ -1,19 +1,61 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Dungeon_01_parts/Floors/Floor_02.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://model/skel/NPC-Skeleton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://model/props/Column 1.1.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://model/props/columns_material.tres" type="Material" id=4]
+[ext_resource path="res://model/props/Column 1.2.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://scripts/chunk_01.gd" type="Script" id=6]
 
 [sub_resource type="StandardMaterial3D" id=1]
 albedo_color = Color( 0.104039, 0.339844, 0.198999, 1 )
 
+[sub_resource type="BoxShape3D" id=2]
+size = Vector3( 0.810019, 1.98189, 0.796984 )
+
+[sub_resource type="BoxShape3D" id=3]
+size = Vector3( 2, 1.9833, 1.63877 )
+
 [node name="Node3D" type="Node3D"]
+script = ExtResource( 6 )
+
+[node name="NPC-Skeleton" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.160069, 0, 0.119908, 0, 0.2, 0, -0.119908, 0, 0.160069, -26.9359, 0, -30.6428 )
+attrib = [ 12, 8, 8, 11 ]
+
+[node name="level" type="Node3D" parent="."]
 script = null
 
-[node name="Floor_02" type="MeshInstance3D" parent="."]
+[node name="Floor_02" type="MeshInstance3D" parent="level"]
 transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, -28.2459, 0, -22.984 )
 mesh = ExtResource( 1 )
 surface_material_override/0 = SubResource( 1 )
 script = null
 
-[node name="NPC-Skeleton" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.160069, 0, 0.119908, 0, 0.2, 0, -0.119908, 0, 0.160069, -39.961, 0, -20.4042 )
+[node name="Column 11" type="MeshInstance3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.233, 0, -21.479 )
+mesh = ExtResource( 3 )
+surface_material_override/0 = ExtResource( 4 )
+script = null
+
+[node name="StaticBody3D" type="StaticBody3D" parent="level/Column 11"]
+script = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/Column 11/StaticBody3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.908591, 0 )
+shape = SubResource( 2 )
+script = null
+
+[node name="Column 12" type="MeshInstance3D" parent="level"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.522, 0, -27.063 )
+mesh = ExtResource( 5 )
+surface_material_override/0 = ExtResource( 4 )
+script = null
+
+[node name="StaticBody3D" type="StaticBody3D" parent="level/Column 12"]
+script = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/Column 12/StaticBody3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.527986, 0.943406, 0 )
+shape = SubResource( 3 )
+script = null

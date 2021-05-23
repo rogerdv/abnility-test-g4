@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/scene_test.gd" type="Script" id=1]
 [ext_resource path="res://scripts/systems/game_input.gd" type="Script" id=2]
-[ext_resource path="res://scenes/test_ui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/test_ui.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/game/light_influence.gd" type="Script" id=4]
 [ext_resource path="res://scenes/npc-test.tscn" type="PackedScene" id=5]
 

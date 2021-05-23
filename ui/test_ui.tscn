@@ -1,0 +1,171 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scripts/ui/test_ui.gd" type="Script" id=1]
+[ext_resource path="res://joystick/Handle_Outline.png" type="Texture2D" id=2]
+[ext_resource path="res://joystick/Handle_Outline_Drag.png" type="Texture2D" id=3]
+[ext_resource path="res://joystick/Joystick_Button.gd" type="Script" id=4]
+[ext_resource path="res://Assets/upg_sword.png" type="Texture2D" id=5]
+[ext_resource path="res://ui/runes-blue-3.png" type="Texture2D" id=6]
+[ext_resource path="res://ui/backpack.png" type="Texture2D" id=7]
+[ext_resource path="res://ui/blood_bar.png" type="Texture2D" id=8]
+[ext_resource path="res://ui/mana_bar.png" type="Texture2D" id=9]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+offset_left = 330.0
+offset_top = 5.0
+offset_right = 485.0
+offset_bottom = 25.0
+structured_text_bidi_override_options = [  ]
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inventory" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -186.0
+offset_top = 19.0
+offset_right = -2.0
+offset_bottom = 205.0
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Inventory"]
+offset_right = 184.0
+offset_bottom = 17.0
+text = "Items"
+structured_text_bidi_override_options = [  ]
+script = null
+
+[node name="Equipped" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -164.0
+offset_top = 262.0
+offset_right = -22.0
+offset_bottom = 427.0
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Equipped"]
+offset_right = 142.0
+offset_bottom = 17.0
+text = "Equipped"
+structured_text_bidi_override_options = [  ]
+script = null
+
+[node name="UI" type="Node2D" parent="."]
+script = null
+
+[node name="Joystick" type="Sprite2D" parent="UI"]
+position = Vector2( 64.7311, 417.897 )
+scale = Vector2( 1.5, 1.5 )
+skew = 4.37114e-08
+texture = ExtResource( 2 )
+script = null
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="UI/Joystick"]
+position = Vector2( -16.5407, -16.1468 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="attack" type="TouchScreenButton" parent="UI"]
+position = Vector2( 778.647, 405.36 )
+skew = 4.37114e-08
+normal = ExtResource( 5 )
+script = null
+
+[node name="fps" type="Label" parent="UI"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_bottom = 35.0
+custom_font_sizes/font_size = 25
+structured_text_bidi_override_options = [  ]
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="spell_book" type="TouchScreenButton" parent="UI"]
+position = Vector2( 181.744, 401.796 )
+skew = 4.37114e-08
+normal = ExtResource( 6 )
+pressed = ExtResource( 6 )
+script = null
+
+[node name="invent" type="TouchScreenButton" parent="UI"]
+position = Vector2( 249.222, 402.392 )
+skew = 4.37114e-08
+normal = ExtResource( 7 )
+pressed = ExtResource( 7 )
+script = null
+
+[node name="action0" type="TouchScreenButton" parent="UI"]
+position = Vector2( 787.441, 284.684 )
+scale = Vector2( 1, 1.01655 )
+skew = 4.37114e-08
+normal = ExtResource( 5 )
+script = null
+
+[node name="action1" type="TouchScreenButton" parent="UI"]
+position = Vector2( 722.906, 305.661 )
+skew = 4.37114e-08
+normal = ExtResource( 5 )
+script = null
+
+[node name="action2" type="TouchScreenButton" parent="UI"]
+position = Vector2( 666.251, 359.082 )
+skew = 4.37114e-08
+normal = ExtResource( 5 )
+script = null
+
+[node name="action3" type="TouchScreenButton" parent="UI"]
+position = Vector2( 656.634, 420.328 )
+skew = 4.37114e-08
+normal = ExtResource( 5 )
+script = null
+
+[node name="stats" type="VBoxContainer" parent="UI"]
+offset_top = 20.8919
+offset_right = 104.0
+offset_bottom = 104.892
+script = null
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hp" type="TextureProgressBar" parent="UI/stats"]
+offset_right = 104.0
+offset_bottom = 20.0
+value = 100.0
+texture_progress = ExtResource( 8 )
+script = null
+
+[node name="energy" type="TextureProgressBar" parent="UI/stats"]
+offset_top = 24.0
+offset_right = 104.0
+offset_bottom = 44.0
+value = 100.0
+texture_progress = ExtResource( 9 )
+script = null
+
+[connection signal="pressed" from="UI/attack" to="." method="_on_Attack_pressed"]
+[connection signal="pressed" from="UI/spell_book" to="." method="_on_spell_book_pressed"]
+[connection signal="pressed" from="UI/invent" to="." method="_on_invent_pressed"]
+[connection signal="pressed" from="UI/action0" to="." method="_on_action_pressed" binds= [ 0 ]]
+[connection signal="pressed" from="UI/action1" to="." method="_on_action_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="UI/action2" to="." method="_on_action_pressed" binds= [ 2 ]]
+[connection signal="pressed" from="UI/action3" to="." method="_on_action_pressed" binds= [ 3 ]]

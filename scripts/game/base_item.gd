@@ -4,6 +4,7 @@ class_name base_item
 #Base class for items. Shared properties reside here
 
 @export var id:String = "id"
+@export var desc:String = "desc"
 @export var type:int = 0		#A weapon? Armor? Etc
 @export var coin_price:int = 0		#price in coins
 @export var dmd_price:int = 0		#price in diamonds, for premium items
@@ -25,6 +26,8 @@ const IT_POTION=4
 const SLOT_WEAPON=0
 const SLOT_ARMOR=1
 const SLOT_SHIELD=3
+const SLOT_HEAD=4
+
 
 var properties = []		#item properties: 
 # {"type":Damage,"subtype":DmgNormal,"value":100} 

@@ -9,14 +9,9 @@ func _ready():
 	add_child(game_instance.player)
 	game_instance.player.name = "player"
 	game_instance.player.translation = Vector3(0,0,0)
-	joystick = $UI.get_joystick()
-	for i in game_instance.player.get_player().abilities.size():
-		#print(i)
-		$UI.add_button(game_instance.player.get_player().abilities[i].get("id"),i)
-	
-	for i in game_instance.player.get_player().inventory.size():
-		#print(i)
-		$UI.add_item_button(game_instance.player.get_player().inventory[i].get("id"),i)	
+	joystick = $UI.get_joystick()	
+	var t = {"id":"pum","amount":1}
+	$npc_skel.inventory.append(t)
 
 
 func _input(event):

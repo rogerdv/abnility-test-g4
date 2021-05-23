@@ -93,7 +93,7 @@ func check_actions(delta):
 							game_data.get_item(actions[0].get("id")).use(actions[0].get("owner"),actions[0].get("target"))
 							play_anim(game_data.get_item(actions[0].get("id")).use_anim)
 				"ability":	
-					play_anim(game_instance.get_ability(actions[0].get("id")).use_anim)
+					play_anim(game_data.get_ability(actions[0].get("id")).use_anim)
 					game_data.get_ability(actions[0].get("id")).execute(actions[0].get("owner"),actions[0].get("target"))
 					
 		#in cooldown

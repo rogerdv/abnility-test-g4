@@ -4,7 +4,7 @@
 [ext_resource path="res://model/items/shield_01.obj" type="ArrayMesh" id=2]
 
 [node name="shield" type="MeshInstance3D"]
-transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
+transform = Transform( -6.55671e-08, -1.5, 0, 1.5, -6.55671e-08, 0, 0, 0, 1.5, 0, 0, 0 )
 mesh = ExtResource( 2 )
 surface_material_override/0 = ExtResource( 1 )
 script = null

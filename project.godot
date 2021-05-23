@@ -105,23 +105,23 @@ _global_script_classes=[ {
 "path": "res://scripts/game/passive_wp_master.gd"
 } ]
 _global_script_class_icons={
+@"ai_state": "",
 @"item_list": "",
 @"test_passive": "",
-@"ai_state": "",
 @"ability_list": "",
 @"base_item": "",
 @"player_character": "",
 @"skidle_logic": "",
 @"base_ability": "",
 @"item_weapon": "",
+@"ai_logic": "",
 @"item_armor": "",
 @"pow_me": "",
-@"ai_logic": "",
 @"weapon_mastery": "",
 @"bonus_sword": "",
 @"character": "",
-@"test_ability": "",
 @"npc_character": "",
+@"test_ability": "",
 @"move_ability": "",
 @"skel_combat": ""
 }

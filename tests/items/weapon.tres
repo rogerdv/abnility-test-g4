@@ -8,6 +8,7 @@
 resource_local_to_scene = true
 script = ExtResource( 1 )
 id = "pum"
+desc = "A normal sword"
 type = 1
 coin_price = 150
 dmd_price = 0

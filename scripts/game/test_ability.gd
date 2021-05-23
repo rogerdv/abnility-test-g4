@@ -7,6 +7,8 @@ class_name test_ability
 
 # Called when the node enters the scene tree for the first time.
 func execute(caster, target):	
+	if target==null:
+		return
 	var part = effect.instance()
 	part.target=target	
 	caster.get_parent().add_child(part)

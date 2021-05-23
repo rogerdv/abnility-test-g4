@@ -37,6 +37,11 @@ func passive_unequip(owner):
 	pass
 	
 #executed by character every update
-func passive_process(owner):
+func passive_update(owner):
+	pass
+
+func update(caster,target):
 	pass
 		
+func end(caster,target):
+	pass

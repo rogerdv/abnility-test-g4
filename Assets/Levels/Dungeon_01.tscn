@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/Dungeon_01_parts/Unions/Union_01.obj" type="ArrayMesh" id=6]
 [ext_resource path="res://Assets/Dungeon_01_parts/Floors/Floor_02.obj" type="ArrayMesh" id=7]
 [ext_resource path="res://Assets/Dungeon_01_parts/Walls/wall_01.obj" type="ArrayMesh" id=8]
-[ext_resource path="res://scenes/test_ui.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ui/test_ui.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/scene_test.gd" type="Script" id=11]
 [ext_resource path="res://model/skel/NPC-Skeleton.tscn" type="PackedScene" id=12]
 

@@ -13,13 +13,14 @@ func _ready():
 	#game_instance.player.rotation=Vector3(0,-1,0)
 	
 	#game_instance.player.passive = "passive0"
-	for i in game_instance.player.get_player().abilities.size():
-		#print(i)
-		$UI.add_button(game_instance.player.get_player().abilities[i].get("id"),i)
+	#for i in game_instance.player.get_player().abilities.size():
+	#	#print(i)
+	#	$UI.add_button(game_instance.player.get_player().abilities[i].get("id"),i)
 	
-	for i in game_instance.player.get_player().inventory.size():
-		#print(i)
-		$UI.add_item_button(game_instance.player.get_player().inventory[i].get("id"),i)	
+	#for i in game_instance.player.get_player().inventory.size():
+	#	#print(i)
+	#	$UI.add_item_button(game_instance.player.get_player().inventory[i].get("id"),i)	
+	
 	#game_instance.player.get_player().target = $npc
 	# Put some stuff in the NPC
 	var t = {"id":"pum","amount":1}

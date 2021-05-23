@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource( 1 )
 id = "skelet_claw"
+desc = "An skeleton claw. You can even equip it in your hand"
 type = 1
 coin_price = 0
 dmd_price = 0

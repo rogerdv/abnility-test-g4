@@ -10,8 +10,9 @@ func do_logic(manager):
 		#equip  something
 		manager.parent.equipped[base_item.SLOT_WEAPON]=manager.parent.inventory[0].get("id")
 		game_data.get_item(manager.parent.equipped[base_item.SLOT_WEAPON]).equip(manager.parent)
-		
-	if manager.parent.target.translation.distance_to(manager.parent.translation)>2:
+	var dist=manager.parent.target.translation.distance_to(manager.parent.translation)	
+	print(dist)
+	if dist>50:
 		print("Too far")	
 		manager.parent.move_to(manager.parent.target.translation)
 	else:

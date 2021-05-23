@@ -7,13 +7,15 @@
 [resource]
 script = ExtResource( 1 )
 id = "shield"
-type = 2
+desc = "Shield"
+type = 3
 coin_price = 200
 dmd_price = 0
 mesh = ExtResource( 2 )
-UseAnim = null
-UseTime = null
+use_anim = null
+UseTime = 1.0
 AttachPoint = null
+equip_slot = 3
 icon = ExtResource( 3 )
 stackable = false
 protection = [ 5.0, 0.0, 0.0, 0.0 ]
